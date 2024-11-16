@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="146dp"
+        android:text="Workout Active: Leg Day"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#FF7322"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/wmovementcrew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="208dp"
+        android:text="Current Exercise"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/white"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        tools:layout_editor_absoluteY="253dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="34dp"
+                android:text="Barbell Squat"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="56dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="#FF7322"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="60 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="12 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="80 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="12 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="90 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="10 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/white"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        tools:layout_editor_absoluteY="553dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="34dp"
+                android:text="Single Leg Calf Raise"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="56dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="#FF7322"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="32dp"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="496dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="15 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="20 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="20 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="20 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="25 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="15 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="Next Exercise"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView2"
+        tools:layout_editor_absoluteY="553dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="34dp"
+                android:text="Leg Press"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="56dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="#FF7322"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="32dp"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="496dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="80 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="8 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="85 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="8 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_row9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="#FF7322" />
+
+                    <TextView
+                        android:id="@+id/firstText_row9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="90 kg"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/secondText_row9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="8 reps"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
